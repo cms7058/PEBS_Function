@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {simulate,applyMaterial,simulationProject,descriptive} from '../src/stage-materials.js';
+const variables=[{name:'温度',unit:'°C',role:'X',definition:'测量温度',min:10,max:30},{name:'强度',unit:'MPa',role:'Y',definition:'测量强度',min:40,max:90}];
+const base={project:{name:'实际工程',plannedY:'旧Y',plannedXs:'旧X'},data:{columns:['旧X','旧Y'],rows:[[1,2]],synthetic:false},xs:[0],y:1,model:{rmse:1},scenario:{x:1},completed:[1,2,3,4,5],mode:'real',stage:3};const before=JSON.stringify(base);
+const preview={fields:[{key:'plannedY',value:'old'},{key:'plannedXs',value:'old'}],variables,collection_headers:['温度 °C','强度 MPa','批次'],analysis_plan:[],instructions:[]};
+const updated=applyMaterial(base,3,preview,['plannedY','plannedXs']);assert.equal(updated.project.plannedY,'强度 MPa');assert.equal(updated.project.plannedXs,'温度 °C');assert.deepEqual(updated.data,base.data);assert.equal(updated.mode,'real');assert.equal(updated.model,null);assert.deepEqual(updated.completed,[1,2]);assert.equal(JSON.stringify(base),before);
+const simulation=simulate(variables);assert.equal(simulation.rows.length,100);assert.equal(simulation.synthetic,true);assert.deepEqual(simulation,simulate(variables));assert(simulation.rows.every(r=>r[0]>=10&&r[0]<=30&&r[1]>=40&&r[1]<=90));assert.equal(descriptive(simulation)[0][1],100);
+assert.throws(()=>simulate([{...variables[0],min:30},variables[1]]));assert.throws(()=>simulate([{...variables[0],name:'强度',unit:'MPa'},variables[1]]));
+const demo=simulationProject(updated,simulation,'p1');assert.equal(demo.mode,'demo');assert.equal(demo.simulation_of,'p1');assert.equal(demo.stage,4);assert.equal(updated.mode,'real');assert.deepEqual(updated.data.rows,[[1,2]]);assert.equal(demo.model,null);assert.equal(demo.y,1);
+const skipped=applyMaterial(base,2,{...preview,variables:[],fields:[{key:'scope',value:'new'}]},[]);assert.equal(skipped.project.scope,undefined);assert.deepEqual(skipped.model,base.model);assert.throws(()=>applyMaterial(base,2,{...preview,fields:[{key:'owner',value:'invented'}]},['owner']));
+console.log('PASS: editable stage import, field whitelist, original data protection, invalidation, simulation ranges, separate demo, descriptive statistics');

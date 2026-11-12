@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import {bookSkillState,skillBookOptions,extractionStatus,chapterRanges} from '../src/skill-books.js';
+const books=[{id:'old',created_at:1,uploaded_at:1,indexed:true},{id:'scan',created_at:4,uploaded_at:2,indexed:false},{id:'pending',created_at:3,uploaded_at:null,indexed:false},{id:'ready',created_at:2,uploaded_at:1,indexed:true}];
+const skills=[{book_id:'old',mode:'book-to-skill'},{book_id:'ready',mode:'template'}];
+assert.equal(bookSkillState(books[0],skills).label,'全部提取');
+assert.equal(bookSkillState(books[0],skills).ready,false);
+assert.equal(bookSkillState(books[1],skills).label,'需 OCR 文字识别');
+assert.equal(bookSkillState(books[2],skills).label,'待上传 PDF');
+assert.equal(bookSkillState(books[3],skills).ready,true);
+assert.deepEqual(skillBookOptions(books,skills).map(b=>b.id),['scan','pending','ready','old']);
+assert.equal(skillBookOptions(books,skills).length,books.length);
+console.log('PASS: new books stay visible, scanned/pending/generated states, template eligibility, newest first');
+
+const book={id:'b',pages:10};const pack=r=>({book_id:'b',mode:'book-to-skill',source_scope:r});
+assert.equal(extractionStatus(book,[]),'未提取');assert.equal(extractionStatus(book,[{book_id:'b',mode:'template'}]),'未提取');
+assert.equal(extractionStatus(book,[pack([{start:2,end:10}])]),'部分提取');
+assert.equal(extractionStatus(book,[pack([{start:1,end:5}]),pack([{start:6,end:10}])]),'全部提取');
+assert.equal(extractionStatus(book,[pack([])]),'全部提取');
+const chapters=[{id:'parent',title:'父章',start:1,end:5,selectable:true},{id:'child',title:'子节',start:2,end:3,selectable:true},{id:'next',title:'下章',start:6,end:10,selectable:true}];
+assert.deepEqual(chapterRanges(chapters,['parent','child']),[{label:'父章',start:1,end:5}]);
+assert.equal(chapterRanges(chapters,['child','next']).length,2);
+assert.equal(bookSkillState({...book,uploaded_at:1,indexed:true},[pack([{start:2,end:10}])]).ready,true);
+console.log('PASS: extraction coverage union, template exclusion, chapter overlap merge and repeated book eligibility');

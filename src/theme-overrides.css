@@ -1,0 +1,22 @@
+/* Light blue theme: calm blue-gray surfaces with no gradients. */
+:root{color:#20384d;background:#f3f8fc}
+body,.main{background:#f3f8fc;color:#20384d}
+.sidebar{background:#18374e;color:#b9d2e3}.brand-mark{background:#2d6688;color:#fff}.brand-sub,.nav-label,.user-role{color:#8eafc4}.nav-item{color:#b9d2e3}.nav-item:hover,.nav-item.active{background:#285670;color:#fff}.nav-item.active{box-shadow:inset 3px 0 0 #8dc3df}.user-card{background:#214b65;border-color:#356b88}.avatar{background:#75a9c6;color:#18374e}
+.topbar{background:#fff;border-bottom-color:#d7e6f0}.eyebrow,.muted,.helper,.source-meta,.step-sub,.legend,.table-meta{color:#668096}.topbar h1,.page-title,.section-title,.card-title,.step-title{color:#20384d}
+.pill,.status-pill,.tag,.pill.amber,.pill.teal,.status-pill.amber,.status-pill.teal{background:#e6f2f9;color:#39769e;border-color:#c9e0ed}
+.primary-btn,.run-btn,.export-btn{background:#4d8fb7;color:#fff;border-color:#39769e}.primary-btn:hover,.run-btn:hover,.export-btn:hover{background:#39769e}.secondary-btn,.ghost-btn{background:#fff;color:#39769e;border-color:#b9d6e6}.secondary-btn:hover,.ghost-btn:hover{background:#eef7fc;border-color:#78a9c5}
+.card,.panel,.stepper,.method-card,.library-card,.skill-card,.source-card,.result-card{background:#fff;border-color:#d7e6f0;box-shadow:0 8px 24px rgba(51,100,130,.08)}.step{border-color:#d7e6f0;background:#fff}.step:hover{border-color:#78a9c5;background:#f7fbfd}.step.active{background:#e9f5fb;border-color:#78a9c5;box-shadow:0 0 0 1px #78a9c5}.step-num{background:#e6f2f9;color:#39769e}.step.active .step-num{background:#4d8fb7;color:#fff}
+.progress i,.status-dot,.green-dot{background:#4d8fb7}.progress{background:#dcebf3}.path-note,.guidance,.guide-card,.info-box,.callout,.empty-state{background:#eef7fc;border-color:#c9e0ed;color:#39769e}.path-note strong,.guidance strong,.guide-card strong,.info-box strong,.callout strong{color:#285d7c}.formula{background:#f1f8fc;border-color:#c9e0ed;color:#285d7c}.teal-text,.source-link,.link{color:#39769e}.source-link:hover,.link:hover{color:#285d7c}
+.dropzone{background:#f4fafe;border-color:#a9cce0}.dropzone:hover{background:#eaf5fb;border-color:#4d8fb7}.run-panel{background:#eaf5fb;color:#20384d;border-color:#c9e0ed;background-image:none}.metric-value,.result-value{color:#285d7c}.scenario-result,.result-highlight{background:#f1f8fc;border-color:#c9e0ed}.book-cover{background:#39769e;color:#fff;border-color:#285d7c}
+.chapter-card,.chapter-row{background:#fff;border-color:#d7e6f0}.chapter-card:hover,.chapter-row:hover{background:#f1f8fc;border-color:#78a9c5}.library-hero,.library-header{background:#eaf5fb;border-color:#c9e0ed}.library-hero h2,.library-header h2{color:#285d7c}.pipeline-line{background:#c9e0ed}.pipeline-node{background:#fff;border-color:#78a9c5;color:#39769e}.pipeline-node.active{background:#4d8fb7;color:#fff;border-color:#39769e}.method-card.selected,.skill-card.selected{border-color:#4d8fb7;box-shadow:0 0 0 2px #c9e0ed}.method-icon,.skill-icon{background:#e6f2f9;color:#39769e}
+.legend-dot.blue,.chart-dot.blue{background:#4d8fb7}.legend-dot.green,.chart-dot.green{background:#78a9c5}.legend-dot.amber,.chart-dot.amber{background:#9abbd0}.modal-overlay{background:rgba(24,55,78,.38)}.modal{background:#fff;border-color:#d7e6f0}.table th{background:#eef7fc;color:#39769e}input,textarea,select{background:#fff;border-color:#c9dce8;color:#20384d}input:focus,textarea:focus,select:focus{border-color:#4d8fb7;box-shadow:0 0 0 3px rgba(77,143,183,.14)}
+*{background-image:none !important}
+
+.model-settings .primary{background:#438fbf;border-color:#438fbf;color:#fff}
+.model-settings .info{background:#edf6fd;border:1px solid #cce3f3;color:#466b85}
+.model-settings p,.model-settings label{color:#56758b}
+.model-settings input,.model-settings select{border-color:#c5ddea;color:#233e55;background:#fff}
+.brand>div{overflow:hidden;flex-shrink:0}.brand .brand-icon{display:block;width:100%;height:100%;object-fit:contain}
+.topbar .workspace-home{display:inline-flex;align-items:center;gap:15px;padding:0;font:inherit;color:inherit;cursor:pointer;border-radius:4px}
+.topbar .workspace-home:hover{color:#39769e}
+.topbar .workspace-home:focus-visible{outline:2px solid #4d8fb7;outline-offset:5px}

@@ -1,0 +1,20 @@
+[
+  {"title":"NASA Systems Engineering Handbook","stages":[1,7,9],"access":"免费·英文·官方 PDF","source_url":"https://www.nasa.gov/wp-content/uploads/2018/09/nasa_systems_engineering_handbook_0.pdf"},
+  {"title":"Managing to Learn — John Shook","stages":[1,9],"access":"付费·英文·纸书及配套资料","source_url":"https://www.lean.org/store/book/managing-to-learn/"},
+  {"title":"What is Theory of Constraints? — Alan Barnard","stages":[2],"access":"免费·英文·作者 PDF","source_url":"https://www.dralanbarnard.com/pdf/What_is_Theory_of_Constraints_%28TOC%29.PDF"},
+  {"title":"《生产计划与管制》第 10 讲：限制理论 — 林则孟","stages":[2],"access":"免费·繁体中文·课程讲义","source_url":"https://ocw.nthu.edu.tw/chapter/136/1815"},
+  {"title":"Drum Buffer Rope and Buffer Management in a Make-to-Stock Environment","stages":[2],"access":"免费·英文·PDF","source_url":"https://www.tocinstitute.org/uploads/1/2/7/9/12796657/drum_buffer_rope_and_buffer_management_in_a_make-to-stock.pdf"},
+  {"title":"《学习观察：通过价值流图创造价值、消除浪费》","stages":[2,9],"access":"付费·中文·纸书","source_url":"https://www.sanmin.com.tw/product/index/006124990"},
+  {"title":"NIST / SEMATECH Engineering Statistics Handbook","stages":[3,4,5,6,7,8,10],"access":"免费·英文·官方 PDF","source_url":"https://www.itl.nist.gov/div898/handbook/toolaids/pff/index.htm"},
+  {"title":"《实验设计（DOE）于制程与品质改善之应用》— 洪弘祈","stages":[3,8],"access":"免费·繁体中文·讲义 PDF","source_url":"https://ir.lib.cyut.edu.tw/bitstream/310901800/9620/1/實驗設計(DOE)於製程與品質改善之應用.pdf"},
+  {"title":"An Introduction to Design of Experiments — Larry B. Barrentine","stages":[3],"access":"付费·英文·ASQ 电子书","source_url":"https://asq.org/quality-press/display-item?item=E1016"},
+  {"title":"The ASQ Certified Quality Engineer Handbook, 5th Edition","stages":[4,10],"access":"付费·英文·网页 DRM 阅读","source_url":"https://asq.org/quality-press/display-item?item=E1602"},
+  {"title":"An Introduction to Statistical Learning (Python / R)","stages":[5,7],"access":"免费·英文·作者官网下载","source_url":"https://www.statlearning.com/"},
+  {"title":"Design and Analysis of Experiments, 10th Edition — Douglas C. Montgomery","stages":[5,7],"access":"付费·英文·平台电子书","source_url":"https://www.vitalsource.com/products/design-and-analysis-of-experiments-enhanced-etext-douglas-c-montgomery-v9781119492443"},
+  {"title":"《實驗設計與分析》— Montgomery 第 10 版繁体中文译本","stages":[5,7],"access":"付费·繁体中文·纸书","source_url":"https://www.sanmin.com.tw/product/index/011881364"},
+  {"title":"Experimental Statistics — NBS Handbook 91","stages":[6],"access":"免费·英文·NIST 官方 PDF","source_url":"https://nvlpubs.nist.gov/nistpubs/Legacy/hb/nbshandbook91.pdf"},
+  {"title":"Practical Design of Experiments — Mark Allen Durivage","stages":[6],"access":"付费·英文·ASQ PDF","source_url":"https://asq.org/quality-press/display-item?item=E1502"},
+  {"title":"《试验设计及最优化》— 铁军、李纯","stages":[6,8],"access":"付费·简体中文·纸书","source_url":"https://www.cip.com.cn/Book/Index/316806"},
+  {"title":"Convex Optimization — Stephen Boyd, Lieven Vandenberghe","stages":[8],"access":"免费·英文·作者官网下载","source_url":"https://web.stanford.edu/~boyd/cvxbook/"},
+  {"title":"《基于统计过程控制（SPC）的产品质量控制分析》","stages":[10],"access":"免费·中文·论文 PDF","source_url":"https://xbbjb.whtcc.edu.cn/__local/B/42/26/DE247407D516E6412FF4F22DF00_A29BF535_750E1.pdf"}
+]
